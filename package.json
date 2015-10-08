@@ -17,11 +17,12 @@
     "systemjs": "^0.19.3"
   },
   "devDependencies": {
+    "connect-livereload": "^0.5.3",
+    "express": "^4.13.3",
     "gulp": "^3.9.0",
-    "gulp-live-server": "0.0.29",
     "gulp-typescript": "^2.9.2",
     "gulp-watch": "^4.3.5",
-    "live-server": "^0.8.1",
+    "tiny-lr": "^0.2.0",
     "typescript": "^1.6.2"
   }
 }
