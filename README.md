@@ -37,7 +37,7 @@ Things at play here:
 npm install -g gulp typescript@1.6.2 live-server
 npm install
 gulp setup
-``
+```
 
 ## How to run
 
