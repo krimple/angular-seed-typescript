@@ -1,7 +1,10 @@
 var gulp = require('gulp');
-// gulp's built in watch doesn't watch for new files see
-// maybe 
 var ts = require('gulp-typescript');
+var gls = require('gulp-live-server');
+var server = require('gulp-server-livereload');
+
+// in order for project-based gulp-typescript to work, you MUST create the project 
+// outside of a task...
 var tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('setup', function(done) {
@@ -37,6 +40,25 @@ gulp.task('ts', function(done) {
     return tsResult.js.pipe(gulp.dest('web/js'));
 });
 
-gulp.task('watch', ['ts'], function() {
+gulp.task('watch', ['watch.assets', 'watch.ts']);
+
+gulp.task('watch.assets', ['assets'], function() {
+   return gulp.watch(['./src/**/*.json', './src/**/*.html', './src/**/*.css'], ['assets']) 
+});
+
+gulp.task('watch.ts', ['ts'], function() {
     return gulp.watch('src/**/*.ts', ['ts']);
+});
+
+gulp.task('server', ['watch'], function() {
+
+
+});
+gulp.task('webserver', function() {
+  gulp.src('web/')
+    .pipe(server({
+      livereload: true,
+      directoryListing: true,
+      open: true
+    }));
 });
