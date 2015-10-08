@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo list, Angular 2 style</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="todo/app.css"/>
+</head>
+<body>
+<div class="container">
+    <h1>TODO List with Bootstrap and Angular2</h1>
+    <app>Loading...</app>
+</div>
+</body>
+
+<!-- ES6-related imports -->
+<script src="lib/system.js"></script>
+<script src="lib/es6-shim.js"></script>
+<script src="lib/Reflect.js"></script>
+
+<!-- app imports -->
+<script src="../lib/jquery.js"></script>
+<script src="../lib/bootstrap.min.js"></script>
+
+<script>
+    //configure system loader
+    System.config({
+        map: {
+            'angular2/angular2': 'lib/angular2.dev.js',
+            'angular2/http': 'lib/http.dev.js',
+            'angular2/router': 'lib/router.dev.js'
+        },
+        defaultJSExtensions: true
+        
+    });
+</script>
+
+<script src="lib/angular2.dev.js"></script>
+<script src="lib/http.dev.js"></script>
+<script src="lib/router.dev.js"></script>
+
+<script>
+    //bootstrap the Angular2 application
+    System.import('./js/todo/app.js').catch(console.log.bind(console));
+</script>
+
+</body>
+</html>

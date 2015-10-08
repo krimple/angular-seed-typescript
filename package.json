@@ -1,0 +1,26 @@
+{
+  "name": "ken-ts-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.39",
+    "bootstrap": "^3.3.5",
+    "es6-shim": "^0.33.6",
+    "jquery": "^2.1.4",
+    "rx": "^4.0.0",
+    "systemjs": "^0.19.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-typescript": "^2.9.2",
+    "gulp-watch": "^4.3.5",
+    "live-server": "^0.8.1",
+    "typescript": "^1.6.2"
+  }
+}

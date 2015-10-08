@@ -1,0 +1,28 @@
+{
+  "version": "1.6.0",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "web/js",
+    "target": "es5",
+    "module": "system",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "listFiles": true
+  },
+  "files": [
+        "node_modules/angular2/bundles/typings/es6-shim/es6-shim.d.ts",
+        "node_modules/angular2/bundles/typings/angular2/angular2.d.ts",
+        "node_modules/angular2/bundles/typings/angular2/http.d.ts",
+        "node_modules/angular2/bundles/typings/angular2/router.d.ts",
+        "node_modules/rx/ts/rx.d.ts",
+        "src/todo/app.ts",
+        "src/todo/task-model.ts",
+        "src/todo/task-list.ts",
+        "src/todo/task-entry.ts"
+  ]
+}
