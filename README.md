@@ -31,7 +31,6 @@ Things at play here:
 ## How to set up 
 
 * Clone the repo
-
 * Run the following
 
 ```bash
@@ -42,11 +41,8 @@ gulp setup
 
 ## How to run
 
-_This will eventually turn into a single task but for now follow these
-instructions_
+Just run the gulp command to fire up a server with livereload and automatic typescript compilation. Browse to `http://localhost:4000`.
 
 ```bash
 gulp 
-
 ```
-*  (will eventually go away) first time - run `
