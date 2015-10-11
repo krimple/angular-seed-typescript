@@ -1,9 +1,10 @@
-import { Component, View }  from 'angular2/angular2';
+import { Component, View, DatePipe }  from 'angular2/angular2';
 import { TaskModel } from './task-model';
 
 @Component({
     selector: 'task-entry',
-    properties: ['task']
+    properties: ['task'],
+    filters: [DatePipe]
 })
 @View({
     template: `
@@ -16,13 +17,13 @@ import { TaskModel } from './task-model';
                        (click)="toggleComplete()">
             </div>
             <div class="col-lg-2">
-                {{ task.priority }}
+                {{ task.priority | number:'.2-4' }}
             </div>
             <div class="col-lg-5">
                 {{ task.description }}
             </div>
             <div class="" col-lg="3">
-                {{ task.dueDate}}
+                {{ task.dueDate }}
             </div>
         </div>
     </a>
