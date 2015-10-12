@@ -22,7 +22,7 @@ System.register(['angular2/angular2'], function(exports_1) {
                 function LocaleDate() {
                 }
                 LocaleDate.prototype.transform = function (value, args) {
-                    if (value !== undefined && value !== null && !Number.isNaN(value)) {
+                    if (value !== undefined && value !== null && !Number.isNaN(value.getTime())) {
                         return value.toLocaleDateString();
                     }
                     else {
