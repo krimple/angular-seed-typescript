@@ -1,3 +1,19 @@
-<div class="list-group">
-    <task-entry *ng-for="#task of taskService.tasks" [task]="task"></task-entry>
-</div>
+<a href="#" class="list-group-item">
+    <div class="list-group">
+        <div class="row">
+            <div class="col-lg-1">
+                X
+            </div>
+            <div class="col-lg-2">
+                Priority
+            </div>
+            <div class="col-lg-5">
+                Description
+            </div>
+            <div class="col-lg-3">
+                Due Date
+            </div>
+        </div>
+    </div>
+</a>
+<task-entry *ng-for="#task of taskService.tasks" [task]="task"></task-entry>

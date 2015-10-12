@@ -14,4 +14,12 @@ export class TaskModel {
         this.dueDate = dueDate;
         this.complete = complete;
     }
+
+    static fromJson(description: string, priority: string, dueDate: string, complete: string) {
+        let npriority = Number.parseInt(priority);
+        let ddueDate = new Date(dueDate);
+        let bcomplete = new Boolean(complete).valueOf();
+        let taskModel = new TaskModel(description, npriority, ddueDate, bcomplete)
+        return taskModel;
+    }
 }

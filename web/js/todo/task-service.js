@@ -26,9 +26,12 @@ System.register(['angular2/angular2', 'angular2/http', './task-model'], function
         execute: function() {
             TaskService = (function () {
                 function TaskService(http) {
-                    var _this = this;
                     this.http = http;
                     this.tasks = [];
+                    this.fetchTasks();
+                }
+                TaskService.prototype.fetchTasks = function () {
+                    var _this = this;
                     this.http.get('/todo/data/todos.data.json')
                         .map(function (res) {
                         return res.json();
@@ -37,18 +40,17 @@ System.register(['angular2/angular2', 'angular2/http', './task-model'], function
                         if (tasks) {
                             var result = [];
                             tasks.forEach(function (task) {
-                                result.push(task);
+                                // obviously not complete - need checks for nulls, etc...
+                                result.push(task_model_1.TaskModel.fromJson(task.description, task.priority, task.dueDate, task.complete));
                             });
                             return result;
                         }
-                        console.log(task);
-                        new task_model_1.TaskModel(task.description, task.priority, task.dueDate, task.complete);
                     })
                         .subscribe(function (tasks) {
                         console.log('Tasks!', tasks);
                         _this.tasks = tasks;
                     });
-                }
+                };
                 TaskService = __decorate([
                     angular2_1.Injectable(), 
                     __metadata('design:paramtypes', [http_1.Http])

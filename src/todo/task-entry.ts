@@ -1,15 +1,14 @@
 import { Component, View, DatePipe }  from 'angular2/angular2';
 import { TaskModel } from './task-model';
+import { LocaleDate } from './date-pipe';
 
 @Component({
     selector: 'task-entry',
-    properties: ['task'],
-    filters: [DatePipe]
+    properties: ['task']
 })
 @View({
     template: `
-    <a href="#" class="list-group-item"
-            ng-class="true">
+    <a href="#" class="list-group-item" ng-class="true">
         <div class="row">
             <div class="col-lg-1">
                 <input type="checkbox"
@@ -23,11 +22,12 @@ import { TaskModel } from './task-model';
                 {{ task.description }}
             </div>
             <div class="" col-lg="3">
-                {{ task.dueDate }}
+                {{ task.dueDate | localeDate }}
             </div>
         </div>
     </a>
-`
+`,
+    pipes: [LocaleDate]
 })
 export class TaskEntry {
     task: TaskModel;
