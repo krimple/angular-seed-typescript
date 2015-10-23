@@ -76,7 +76,8 @@ gulp.task('express', function() {
   var express = require('express');
   var app = express();
   app.use(require('connect-livereload')({
-    port: 4002
+    port: 35729,
+    address: '0.0.0.0'
   }));
   app.use(express.static(__dirname + '/web'));
   app.listen(4000, '0.0.0.0');
