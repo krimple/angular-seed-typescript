@@ -1,6 +1,8 @@
 .vscode
 *.tmp
 node_modules/
+web/lib
+web/js
 .idea
 .eclipse
 .classpath
