@@ -14,7 +14,9 @@ gulp.task('setup', function(done) {
     'node_modules/angular2/bundles/http.*.js*',
     'node_modules/angular2/bundles/router.*.js*',
     'node_modules/es6-shim/es6-shim.js*',
-    'node_modules/systemjs/dist/*.*'
+    'node_modules/systemjs/dist/*.*',
+    'node_modules/jquery/dist/jquery.*js',
+    'node_modules/bootstrap/dist/js/bootstrap*.js'
   ]).pipe(gulp.dest('web/lib'));
 
   gulp.src([
