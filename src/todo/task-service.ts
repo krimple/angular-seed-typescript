@@ -2,7 +2,7 @@ import {Injectable} from 'angular2/angular2';
 import {Http} from 'angular2/http';
 import {TaskModel} from './task-model';
 import {HTTP_BINDINGS} from 'angular2/http';
-import * as Rx from 'rx';
+import {Observable} from '@reactivex/rxjs';
 
 @Injectable()
 export class TaskService {
@@ -16,9 +16,7 @@ export class TaskService {
 
     fetchTasks() {
         this.http.get('/todo/data/todos.data.json')
-            .map((res) => {
-                return res.json();
-            })
+            .map((res) => { return res.json(); })
             .map((tasks) => {
                 if (tasks) {
                     let result:Array<TaskModel> = [];

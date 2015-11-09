@@ -9,11 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular2": "^2.0.0-alpha.39",
+    "@reactivex/rxjs": "^5.0.0-alpha.8",
+    "angular2": "^2.0.0-alpha.45",
     "bootstrap": "^3.3.5",
     "es6-shim": "^0.33.6",
     "jquery": "^2.1.4",
-    "rx": "^4.0.0",
     "systemjs": "^0.19.3"
   },
   "devDependencies": {

@@ -16,7 +16,8 @@ gulp.task('setup', function(done) {
     'node_modules/es6-shim/es6-shim.js*',
     'node_modules/systemjs/dist/*.*',
     'node_modules/jquery/dist/jquery.*js',
-    'node_modules/bootstrap/dist/js/bootstrap*.js'
+    'node_modules/bootstrap/dist/js/bootstrap*.js',
+    'node_modules/@reactivex/rxjs/dist/global/Rx.js'
   ]).pipe(gulp.dest('web/lib'));
 
   gulp.src([
@@ -33,11 +34,10 @@ gulp.task('assets', function() {
 gulp.task('ts', function(done) {
   //var tsResult = tsProject.src()
   var tsResult = gulp.src([
-      "node_modules/angular2/bundles/typings/es6-shim/es6-shim.d.ts",
       "node_modules/angular2/bundles/typings/angular2/angular2.d.ts",
       "node_modules/angular2/bundles/typings/angular2/http.d.ts",
       "node_modules/angular2/bundles/typings/angular2/router.d.ts",
-      "node_modules/rx/ts/rx.d.ts",
+      "node_modules/@reactivex/rxjs/dist/es6/Rx.d.ts",
       "src/**/*.ts"
     ])
     .pipe(ts(tsProject), undefined, ts.reporter.fullReporter());
