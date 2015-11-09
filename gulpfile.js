@@ -88,4 +88,4 @@ gulp.task('livereload', function() {
   tinylr.listen(35729);
 });
 
-gulp.task('default', ['express', 'livereload', 'watch']);
+gulp.task('default', ['setup', 'express', 'livereload', 'watch']);
