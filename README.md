@@ -1,3 +1,5 @@
+_Warning - do not use this against 2.0.0-beta.0 yet. I have not spent the time to convert it over. I will do so, but I have bigger fish to fry at the moment. Take a look at any of a number of seed projects if you like, including one I just did at https://github.com/krimple/angular2-simple-ts-http-example which uses beta 0, http and observables._
+
 # Angular 2.0 Seed Project
 
 This project is based on learnings from a few others, including
